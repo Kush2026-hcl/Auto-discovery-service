@@ -1,0 +1,26 @@
+spring:
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: 8081
+
+inventory:
+  service:
+    base-url: http://localhost:8082
+
+snmp:
+  community: public
+  port: 161
+  timeout: 3000
+  retries: 2
+
+discovery:
+  mock:
+    enabled: false

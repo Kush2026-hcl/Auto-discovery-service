@@ -24,3 +24,8 @@ snmp:
 discovery:
   mock:
     enabled: false
+
+    discovery:
+      scheduler:
+        enabled: false
+        cron: "0 */5 * * * ?"

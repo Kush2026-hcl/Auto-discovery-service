@@ -54,7 +54,7 @@ public class DiscoveryServiceImpl implements DiscoveryService {
 
                     InventoryDeviceRequest inventoryRequest =
                             InventoryDeviceRequest.builder()
-                                    .deviceName(device.getHostName())
+                                    .hostName(device.getHostName())
                                     .ipAddress(device.getIpAddress())
                                     .vendor(device.getVendor())
                                     .model(null)
@@ -66,8 +66,7 @@ public class DiscoveryServiceImpl implements DiscoveryService {
                                     .status(device.getStatus())
                                     .build();
 
-                    boolean success =
-                            inventoryClientService.registerDevice(inventoryRequest);
+                    boolean success = inventoryClientService.registerDevice(inventoryRequest);
 
                     if (success) {
                         log.info("Inventory registration successful for {}",

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class InventoryDeviceRequest {
 
-    private String deviceName;
+    private String hostName;
     private String ipAddress;
     private String vendor;
     private String model;
